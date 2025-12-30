@@ -1,17 +1,14 @@
 /** @format */
 import {
   BufferGeometryUtils,
-  FBXLoader,
   FontLoader,
   OBJLoader,
   OrbitControls,
   TextGeometry,
 } from "three/examples/jsm/Addons.js";
-import { HDRLoader } from "three/examples/jsm/Addons.js";
 import "./style.css";
 import * as THREE from "three";
 import GUI from "lil-gui";
-import { texture } from "three/tsl";
 
 //canvas set up
 const CANVAS: HTMLCanvasElement | null = document.querySelector("#three");
@@ -160,7 +157,7 @@ function render() {
 
 render();
 
-window.addEventListener("resize", (ev) => {
+window.addEventListener("resize", () => {
   WIDTH = window.innerWidth;
   HEIGHT = window.innerHeight;
   renderer.setSize(WIDTH, HEIGHT);
