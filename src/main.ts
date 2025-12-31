@@ -92,6 +92,9 @@ function generateCloud(COF1 = 100, COF2 = 20) {
       scene.remove(cloudMesh);
       cloudMesh = new THREE.Mesh(geom, material);
       scene.add(cloudMesh);
+      geom.dispose();
+
+      generatorWorker?.terminate();
     }
   });
 }
